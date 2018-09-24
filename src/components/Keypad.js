@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { numInput } from '../actions/calcActions';
+import { numInput, clrDisplay } from '../actions/calcActions';
 import { Button } from 'reactstrap';
 
 class Keypad extends Component {
@@ -19,7 +19,7 @@ class Keypad extends Component {
     render() {
         return(
             <div id="keypad">
-                <Button id="clear" className="button" >C</Button>
+                <Button id="clear" className="button" onClick={this.props.clrDisplay}>C</Button>
                 <Button id="two" className="button" onClick={this.numInput}>2</Button>
                 <Button id="one" className="button" onClick={this.numInput}>1</Button>
                 <Button id="three" className="button" onClick={this.numInput}>3</Button>
@@ -45,4 +45,4 @@ Keypad.propTypes = {
     numInput: PropTypes.func.isRequired
 }
 
-export default connect(null, { numInput })(Keypad);
+export default connect(null, { numInput, clrDisplay })(Keypad);

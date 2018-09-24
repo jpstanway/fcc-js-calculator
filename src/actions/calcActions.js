@@ -1,4 +1,4 @@
-import { NUM_INPUT } from './types';
+import { NUM_INPUT, CLR_DISPLAY } from './types';
 
 export const numInput = (num) => dispatch => {
     dispatch({
@@ -6,3 +6,10 @@ export const numInput = (num) => dispatch => {
         payload: num
     });
 };
+
+export const clrDisplay = () => dispatch => {
+    dispatch({
+        type: CLR_DISPLAY
+    });
+};
+

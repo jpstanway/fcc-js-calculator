@@ -1,4 +1,4 @@
-import { NUM_INPUT } from '../actions/types';
+import { NUM_INPUT, CLR_DISPLAY } from '../actions/types';
 
 const initialState = {
     display: 0
@@ -11,6 +11,11 @@ export default function(state = initialState, action) {
                 ...state,
                 display: state.display === 0 ? action.payload : state.display + action.payload
             };
+        case CLR_DISPLAY:
+            return{
+                ...state,
+                display: 0
+            }; 
         default:
             return state;
     }
