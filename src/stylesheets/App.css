@@ -1,0 +1,18 @@
+.calculator {
+  height: 400px;
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  background-color: orange; }
+
+#display {
+  width: 100%;
+  text-align: right; }
+  #display p {
+    width: 100%;
+    font-size: 1.5em; }
+
+.button {
+  height: 50px;
+  width: 25%;
+  margin: auto; }
