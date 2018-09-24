@@ -59,7 +59,7 @@ export default function(state = initialState, action) {
                 display: '0',
                 history: '',
                 opIsActive: false,
-                decIsActive: false
+                decIsActive: false,
             }; 
         case CALCULATE:
             return{

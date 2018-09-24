@@ -5,13 +5,13 @@
   padding: 10px;
   background-color: orange; }
 
-#display {
+#display-div {
   width: 100%;
   text-align: right; }
-  #display p {
+  #display-div p {
     width: 100%;
     font-size: 2em; }
-  #display #history {
+  #display-div #history {
     font-size: 1em;
     height: 19px;
     margin: 0; }

@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 class Display extends Component {
     render() {
         return(
-          <div id="display">
+          <div id="display-div">
             <p id="history">{this.props.history}</p>
-            <p>{this.props.display}</p>
+            <p id="display">{this.props.display}</p>
           </div>  
         );
     }
