@@ -25,23 +25,23 @@ class Keypad extends Component {
     render() {
         return(
             <div id="keypad">
-                <Button id="clear" className="button" onClick={this.props.clrDisplay}>C</Button>
+                <Button id="clear" className="button extra-w" onClick={this.props.clrDisplay}>C</Button>
                 <Button id="divide" className="button" onClick={this.opInput}>/</Button>
                 <Button id="multiply" className="button" onClick={this.opInput}>*</Button>
-                <Button id="add" className="button" onClick={this.opInput}>+</Button>
+                <Button id="one" className="button" onClick={this.numInput}>1</Button> 
                 <Button id="two" className="button" onClick={this.numInput}>2</Button>
-                <Button id="one" className="button" onClick={this.numInput}>1</Button>
                 <Button id="three" className="button" onClick={this.numInput}>3</Button>
-                <Button id="subtract" className="button" onClick={this.opInput}>-</Button>
+                <Button id="add" className="button" onClick={this.opInput}>+</Button>
                 <Button id="four" className="button" onClick={this.numInput}>4</Button>
                 <Button id="five" className="button" onClick={this.numInput}>5</Button>
                 <Button id="six" className="button" onClick={this.numInput}>6</Button>
-                <Button id="decimal" className="button" onClick={this.props.decInput}>.</Button>
+                <Button id="subtract" className="button" onClick={this.opInput}>-</Button>
                 <Button id="seven" className="button" onClick={this.numInput}>7</Button>
                 <Button id="eight" className="button" onClick={this.numInput}>8</Button>
                 <Button id="nine" className="button" onClick={this.numInput}>9</Button>
-                <Button id="equals" className="button" onClick={this.props.calculate}>=</Button>
-                <Button id="zero" className="button" onClick={this.numInput}>0</Button>
+                <Button id="equals" className="button extra-h" onClick={this.props.calculate}>=</Button>
+                <Button id="zero" className="button extra-w" onClick={this.numInput}>0</Button>
+                <Button id="decimal" className="button" onClick={this.props.decInput}>.</Button>
             </div>
         );
     }

@@ -6,7 +6,7 @@ class Display extends Component {
     render() {
         return(
           <div id="display">
-            <p>{this.props.history}</p>
+            <p id="history">{this.props.history}</p>
             <p>{this.props.display}</p>
           </div>  
         );

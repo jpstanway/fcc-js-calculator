@@ -21,6 +21,8 @@ export default function(state = initialState, action) {
     function history() {
         if(state.history === '') {
             return `${state.display} ${action.payload}`;
+        } else if(state.opIsActive) {
+            return `${state.history.substr(0, state.history.length - 1)}${action.payload}`;
         } else {
             return `${state.history} ${state.display} ${action.payload}`;
         }

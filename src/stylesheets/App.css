@@ -10,12 +10,23 @@
   text-align: right; }
   #display p {
     width: 100%;
-    font-size: 1.5em; }
+    font-size: 2em; }
+  #display #history {
+    font-size: 1em;
+    height: 19px;
+    margin: 0; }
 
-#zero {
-  width: 50%; }
+#keypad {
+  position: relative; }
 
 .button {
   height: 50px;
   width: 25%;
   margin: auto; }
+
+.extra-w {
+  width: 50%; }
+
+.extra-h {
+  height: 100px;
+  position: absolute; }
