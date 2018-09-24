@@ -6,6 +6,7 @@ class Display extends Component {
     render() {
         return(
           <div id="display">
+            <p>{this.props.history}</p>
             <p>{this.props.display}</p>
           </div>  
         );
@@ -13,11 +14,13 @@ class Display extends Component {
 }
 
 Display.propTypes = {
-    display: PropTypes.number.isRequired
+    display: PropTypes.string.isRequired,
+    history: PropTypes.string
 }
 
 const mapStateToProps = state => ({
-    display: state.calculator.display
+    display: state.calculator.display,
+    history: state.calculator.history
 });
 
 export default connect(mapStateToProps, {})(Display);
