@@ -1,4 +1,4 @@
-import { NUM_INPUT, OP_INPUT, CLR_DISPLAY } from './types';
+import { NUM_INPUT, OP_INPUT, DEC_INPUT, CLR_DISPLAY, CALCULATE } from './types';
 
 export const numInput = (num) => dispatch => {
     dispatch({
@@ -14,9 +14,20 @@ export const opInput = (op) => dispatch => {
     });
 };
 
+export const decInput = () => dispatch => {
+    dispatch({
+        type: DEC_INPUT
+    });
+};
+
 export const clrDisplay = () => dispatch => {
     dispatch({
         type: CLR_DISPLAY
     });
 };
 
+export const calculate = () => dispatch => {
+    dispatch({
+        type: CALCULATE
+    });
+};

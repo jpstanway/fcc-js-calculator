@@ -1,9 +1,11 @@
-import { NUM_INPUT, OP_INPUT, CLR_DISPLAY } from '../actions/types';
+import { NUM_INPUT, OP_INPUT, DEC_INPUT, CLR_DISPLAY, CALCULATE } from '../actions/types';
+import math from 'mathjs';
 
 const initialState = {
     display: '0',
     history: '',
-    opIsActive: false
+    opIsActive: false,
+    decIsActive: false
 }
 
 export default function(state = initialState, action) {
@@ -24,25 +26,47 @@ export default function(state = initialState, action) {
         }
     }
 
+    function calculate() {
+        const formula = `${state.history} ${state.display}`;
+        return String(math.eval(formula));
+    }
+
     switch(action.type) {
         case NUM_INPUT:
             return{
                 ...state,
                 display: display(),
-                opIsActive: state.opIsActive ? false : true
+                opIsActive: false
             };
         case OP_INPUT:
             return{
                 ...state,
                 history: history(),
-                opIsActive: true
+                opIsActive: true,
+                decIsActive: false
+            };    
+        case DEC_INPUT:
+            return{
+                ...state,
+                display: !state.decIsActive ? `${state.display}.`: state.display,
+                decIsActive: true
             };    
         case CLR_DISPLAY:
             return{
                 ...state,
                 display: '0',
-                history: ''
+                history: '',
+                opIsActive: false,
+                decIsActive: false
             }; 
+        case CALCULATE:
+            return{
+                ...state,
+                display: calculate(),
+                history: '',
+                opIsActive: false,
+                decIsActive: false
+            };    
         default:
             return state;
     }
