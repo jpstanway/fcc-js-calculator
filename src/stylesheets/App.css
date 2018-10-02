@@ -1,32 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Share+Tech+Mono");
 .calculator {
-  height: 400px;
-  width: 300px;
-  margin: auto;
+  height: auto;
+  width: 360px;
+  margin: 25% auto;
   padding: 10px;
-  background-color: orange; }
+  background-color: #cfcfd1;
+  border-radius: 11px 11px 24px 24px;
+  -moz-box-shadow: 5px 5px 10px rgba(119, 119, 119, 0.5), inset -2px -5px 5px 2px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 5px 5px 10px rgba(119, 119, 119, 0.5), inset -2px -5px 5px 2px rgba(119, 119, 119, 0.5);
+  box-shadow: 5px 5px 10px rgba(119, 119, 119, 0.5), inset -2px -5px 5px 2px rgba(119, 119, 119, 0.5); }
 
 #display-div {
-  width: 100%;
-  text-align: right; }
-  #display-div p {
-    width: 100%;
-    font-size: 2em; }
+  width: 90%;
+  margin: auto;
+  text-align: right;
+  border: 6px solid #67686a;
+  border-radius: 10px;
+  background-color: #ecefef;
+  -moz-box-shadow: inset 0px 0px 5px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: inset 0px 0px 5px rgba(119, 119, 119, 0.5);
+  box-shadow: inset 0px 0px 5px rgba(119, 119, 119, 0.5); }
   #display-div #history {
     font-size: 1em;
     height: 19px;
-    margin: 0; }
+    padding-top: 2px;
+    padding-right: 10px;
+    margin: 0;
+    color: #c1c1c1; }
+  #display-div #display {
+    font-size: 2.5em;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-right: 5px;
+    color: #060802;
+    font-family: 'Droid Sans Mono', monospace; }
 
 #keypad {
-  position: relative; }
+  position: relative;
+  width: 90%;
+  margin: 5% auto 10% auto; }
+  #keypad #clear {
+    background-color: #9c4f60; }
+    #keypad #clear:hover {
+      background-color: #b46a7b; }
+  #keypad #equals {
+    background-color: #4f609c; }
+    #keypad #equals:hover {
+      background-color: #6a7bb4; }
 
 .button {
+  font-family: 'Share Tech Mono', monospace;
   height: 50px;
-  width: 25%;
-  margin: auto; }
+  width: 24%;
+  margin-bottom: 2%;
+  margin-right: 1%;
+  border: outset 1px #737172;
+  border-radius: 8px 8px 22px 22px;
+  cursor: pointer;
+  position: relative;
+  background-color: #383637;
+  -moz-box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.5), inset -1px -2px 5px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.5), inset -1px -2px 5px rgba(119, 119, 119, 0.5);
+  box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.5), inset -1px -2px 5px rgba(119, 119, 119, 0.5); }
+  .button:active {
+    bottom: -3px;
+    border: solid 1px #737172; }
+  .button:focus {
+    box-shadow: none; }
+  .button:hover {
+    border-color: #8d8a8c; }
+
+.operator {
+  background-color: #609c4f; }
+  .operator:hover {
+    background-color: #7bb46a; }
 
 .extra-w {
-  width: 50%; }
+  width: 49%; }
 
 .extra-h {
-  height: 100px;
+  height: 105px;
   position: absolute; }

@@ -26,16 +26,16 @@ class Keypad extends Component {
         return(
             <div id="keypad">
                 <Button id="clear" className="button extra-w" onClick={this.props.clrDisplay}>C</Button>
-                <Button id="divide" className="button" onClick={this.opInput}>/</Button>
-                <Button id="multiply" className="button" onClick={this.opInput}>*</Button>
+                <Button id="divide" className="button operator" onClick={this.opInput}>/</Button>
+                <Button id="multiply" className="button operator" onClick={this.opInput}>*</Button>
                 <Button id="one" className="button" onClick={this.numInput}>1</Button> 
                 <Button id="two" className="button" onClick={this.numInput}>2</Button>
                 <Button id="three" className="button" onClick={this.numInput}>3</Button>
-                <Button id="add" className="button" onClick={this.opInput}>+</Button>
+                <Button id="add" className="button operator" onClick={this.opInput}>+</Button>
                 <Button id="four" className="button" onClick={this.numInput}>4</Button>
                 <Button id="five" className="button" onClick={this.numInput}>5</Button>
                 <Button id="six" className="button" onClick={this.numInput}>6</Button>
-                <Button id="subtract" className="button" onClick={this.opInput}>-</Button>
+                <Button id="subtract" className="button operator" onClick={this.opInput}>-</Button>
                 <Button id="seven" className="button" onClick={this.numInput}>7</Button>
                 <Button id="eight" className="button" onClick={this.numInput}>8</Button>
                 <Button id="nine" className="button" onClick={this.numInput}>9</Button>
