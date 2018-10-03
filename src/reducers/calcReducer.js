@@ -13,6 +13,8 @@ export default function(state = initialState, action) {
     function display() {
         if(state.display === '0' || state.opIsActive) {
             return action.payload;
+        } else if(state.display.length > 11) {
+            return state.display;
         } else {
             return `${state.display}${action.payload}`;
         }

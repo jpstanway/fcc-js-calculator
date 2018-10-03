@@ -41,6 +41,19 @@
         padding-right: 5px;
         color: $display-color;
     }
+
+    #error {
+        font-size: 1em;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: red;
+        display: none;
+    }
+
+    .show {
+        display: block !important;
+    }
 }
 
 #keypad {

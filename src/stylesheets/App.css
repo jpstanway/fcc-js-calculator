@@ -34,6 +34,15 @@
     margin-bottom: 0;
     padding-right: 5px;
     color: #060802; }
+  #display-div #error {
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+    display: none; }
+  #display-div .show {
+    display: block !important; }
 
 #keypad {
   position: relative;
