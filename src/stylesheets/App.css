@@ -22,14 +22,15 @@
   background-color: #ecefef;
   font-family: "Droid Sans Mono", monospace; }
   #display-div #history {
+    min-height: 26px;
     font-size: 1em;
-    height: 19px;
     padding-top: 2px;
     padding-right: 10px;
     margin: 0;
     color: #c1c1c1; }
   #display-div #display {
-    font-size: 2.5em;
+    word-wrap: break-word;
+    font-size: 2em;
     margin-top: 10px;
     margin-bottom: 0;
     padding-right: 5px;

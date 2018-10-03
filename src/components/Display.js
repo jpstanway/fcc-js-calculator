@@ -8,7 +8,7 @@ class Display extends Component {
           <div id="display-div">
             <p id="history">{this.props.history}</p>
             <p id="display">{this.props.display}</p>
-            <p id="error" className={this.props.display.length > 11 ? 'show' : ''}>max digits reached</p>
+            <p id="error" className={this.props.display.length > 14 ? 'show' : ''}>max digits reached</p>
           </div>  
         );
     }
